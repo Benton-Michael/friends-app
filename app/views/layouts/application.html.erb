@@ -23,6 +23,13 @@
       <%= render 'home/header' %>
 
       <div class="container">
+        <!-- Alerts should only appear IF there is an alert, so the if-statement is necessary -->
+        <% if notice  %>
+          <!-- Using the alerts partial here -->
+          <%= render 'layouts/alerts' %>
+        
+
+
         <br />
       <%= yield %> 
       </div>
